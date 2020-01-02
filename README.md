@@ -3,4 +3,5 @@ A simple transfer learning application of the Densenet201 network for a simple d
 
 Original dataset taken from Kaggle
 https://www.kaggle.com/c/dogs-vs-cats/data
+
 Achieved 99.5660% accuracy
