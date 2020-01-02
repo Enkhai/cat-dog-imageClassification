@@ -42,7 +42,7 @@ if __name__ == '__main__':
     # and make our data loaders
     trainloader = DataLoader(train_data, batch_size=320, shuffle=True)
     testloader = DataLoader(test_data, batch_size=320, sampler=test_sampler)
-    validloader = DataLoader(test_data, batch_size=320, sampler=validation_sampler)
+    validationloader = DataLoader(test_data, batch_size=320, sampler=validation_sampler)
 
     # we will use a pre-trained network
     # pre-trained networks can function well as feature detectors
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     # calculate the time taken for training
     start = time.time()
-    train(model, criterion, optimizer, trainloader, testloader, epochs=5, device=device)
+    train(model, criterion, optimizer, trainloader, validationloader, epochs=5, device=device)
     end = time.time()
     print("Time elapsed for training: %f seconds" % (end - start))
 
